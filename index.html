@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="shedule-table">
+      <tbody class="table-body">
+        <tr>
+          <th>08:00</th>
+          <td rowspan="2">
+            <div class="row" id="0-60"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>08:30</th>
+        </tr>
+        <tr>
+          <th>09:00</th>
+          <td rowspan="2">
+            <div class="row" id="60-120"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>09:30</th>
+        </tr>
+        <tr>
+          <th>10:00</th>
+          <td rowspan="2">
+            <div class="row" id="120-180"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>10:30</th>
+        </tr>
+        <tr>
+          <th>11:00</th>
+          <td rowspan="2">
+            <div class="row" id="180-240"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>11:30</th>
+        </tr>
+        <tr>
+          <th>12:00</th>
+          <td rowspan="2">
+            <div class="row" id="240-300"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>12:30</th>
+        </tr>
+        <tr>
+          <th>13:00</th>
+          <td rowspan="2">
+            <div class="row" id="300-360"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>13:30</th>
+        </tr>
+        <tr>
+          <th>14:00</th>
+          <td rowspan="2">
+            <div class="row" id="360-420"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>14:30</th>
+        </tr>
+        <tr>
+          <th>15:00</th>
+          <td rowspan="2">
+            <div class="row" id="420-480"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>15:30</th>
+        </tr>
+        <tr>
+          <th>16:00</th>
+          <td rowspan="2">
+            <div class="row" id="480-540"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>16:30</th>
+        </tr>
+        <tr>
+          <th>17:00</th>
+          <td rowspan="2">
+            <div class="row" id="540-600"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>17:30</th>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-event-modal" id="add-event-modal">
+      <div class="modal-form-container" id="modal-form-container">
+        <form id="modal-form" class="modal-form" name="myForm">
+          <h3 class="title">Enter your event</h3>
+          <div>
+            <label for="eventName">Event name: </label>
+            <input type="text" name="eventName" id="eventName" placeholder="Event name" required />
+          </div>
+          <div>
+            <label for="start">Time start:</label>
+            <input type="text" name="start" id="start" placeholder="HH:MM" required />
+          </div>
+          <div>
+            <label for="end">Time end:</label>
+            <input type="text" name="end" id="end" placeholder="HH:MM" required />
+          </div>
+          <label for="favcolor">Select your color:</label>
+          <input type="color" id="favcolor" name="favcolor" value="#E2ECF5" /><br /><br />
+
+          <div class="btn-group">
+            <button type="reset" id="resetbtn" class="form-btn">Reset</button>
+            <button type="submit" id="addbtn" class="form-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="editting-event-modal" id="editting-event-modal">
+      <div class="editting-container" id="editting-container">
+        <form class="editting-form" id="editting-form" name="edittingForm">
+          <h3 class="title">Edit your event</h3>
+          <div>
+            <label for="editEventName">New event name: </label>
+            <input
+              type="text"
+              name="editEventName"
+              id="editEventName"
+              placeholder="Event name"
+              required
+            />
+          </div>
+          <div>
+            <label for="newStart">New time start:</label>
+            <input type="text" name="newStart" id="newStart" placeholder="HH:MM" required />
+          </div>
+          <div>
+            <label for="newEnd">New time end:</label>
+            <input type="text" name="newEnd" id="newEnd" placeholder="HH:MM" required />
+          </div>
+          <label for="newfavcolor">Select your favorite color:</label>
+          <input type="color" id="newfavcolor" name="newfavcolor" value="#E2ECF5" /><br /><br />
+
+          <div class="btn-group">
+            <button id="delete" class="form-btn">Delete event</button>
+            <button type="submit" id="changebtn" class="form-btn">Change</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./js/shedule.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/localStorage.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/showModals.js"></script>
+  </body>
+</html>
